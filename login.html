@@ -28,19 +28,20 @@
                 </ul>
             </div>
         </div>
-        <div class="w-full border border-indigo-600 bg-black rounded-xl overflow-hidden text-white">
-            <div class="overflow-hidden px-10 py-5 items-center flex justify-center text-2xl">
-                <div>
-                    <p class="pt-3 pb-2 font-bold">Nguyễn Nhật Huy</p>
-                    <p class="">Lớp: JSB10</p>
-                    <p class="">Trường: Song Ngữ Lạc Hồng</p>
-                    <p class="pt-3 pb-2 text-xl">
-                        Tác giả trang web này chỉ là một học sinh lớp 10 năm học 2025-2026, và cũng là một học sinh trường MindX đang học hỏi và tìm tòi để trở nên giỏi hơn về lĩnh vực Công nghệ thông
-                        tin (Làm Website, Ứng dụng, Lập trình, Thiết kế đồ họa,...) trong tương lai.
-                    </p>
-                </div>
-            </div>
-        </div>
+        <form id="login-form" class="h-[100px] py-50 bg-gradient-to-b from-black to-indigo-950 flex items-center justify-center text-white">
+            <fieldset class="fieldset bg-gray-900/95 border-gray-700 rounded-lg mx-auto w-xs border p-4">
+                <legend class="fieldset-legend text-gray-300 text-3xl text-center uppercase">Login</legend>
+
+                <label class="label">Email</label>
+                <input id="email" type="email" class="input bg-transparent border border-gray-700" placeholder="Email" />
+
+                <label class="label">Password</label>
+                <input id="password" type="password" class="input bg-transparent border border-gray-700" placeholder="Password" />
+
+                <button class="btn btn-primary mt-4">Login</button>
+                <div class="mt-5 text-center">If you don't have an account? <a href="./register.html" class="underline text-blue-400">Register here</a></div>
+            </fieldset>
+        </form>
         <div class="bg-black flex flex-col items-center text-white text-center py-3 space-y-2">
             <p class="">Liên Hệ</p>
             <div class="">Email: huyn****@gmail.com</div>
@@ -51,5 +52,7 @@
                 <p>© 2025 Nguyen Nhat Huy – Đồng tác giả/đồng sở hữu</p>
             </footer>
         </div>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script src="./js/login.js"></script>
     </body>
 </html>

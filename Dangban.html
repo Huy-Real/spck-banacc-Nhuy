@@ -28,18 +28,27 @@
                 </ul>
             </div>
         </div>
-        <div class="w-full border border-indigo-600 bg-black rounded-xl overflow-hidden text-white">
-            <div class="overflow-hidden px-10 py-5 items-center flex justify-center text-2xl">
-                <div>
-                    <p class="pt-3 pb-2 font-bold">Nguyễn Nhật Huy</p>
-                    <p class="">Lớp: JSB10</p>
-                    <p class="">Trường: Song Ngữ Lạc Hồng</p>
-                    <p class="pt-3 pb-2 text-xl">
-                        Tác giả trang web này chỉ là một học sinh lớp 10 năm học 2025-2026, và cũng là một học sinh trường MindX đang học hỏi và tìm tòi để trở nên giỏi hơn về lĩnh vực Công nghệ thông
-                        tin (Làm Website, Ứng dụng, Lập trình, Thiết kế đồ họa,...) trong tương lai.
-                    </p>
+        <div class="py-20 max-w-7xl mx-auto min-h-screen space-y-5 text-white">
+            <div class="flex gap-5">
+                <div class="flex-1 space-y-5">
+                    <div class="">
+                        <label for="" class="label block">Nhập tên tài khoản</label>
+                        <input type="text" class="input" id="acc-id" placeholder="Nhập tên tài khoản" />
+                    </div>
+                    <div class="">
+                        <label for="" class="label block">Nhập mô tả tài khoản</label>
+                        <input type="text" class="input" id="acc-description" placeholder="Nhập mô tả tài khoản" />
+                    </div>
+                    <div class="">
+                        <label for="" class="label block">Nhập link hình ảnh tài khoản</label>
+                        <input type="text" class="input" id="acc-image" placeholder="Nhập link hình ảnh tài khoản" />
+                    </div>
+                </div>
+                <div class="flex-1">
+                    <img src="" alt="" id="image-preview" class="w-full h-80 object-cover" />
                 </div>
             </div>
+            <button class="btn btn-primary" id="btn-send-account">Đăng acc</button>
         </div>
         <div class="bg-black flex flex-col items-center text-white text-center py-3 space-y-2">
             <p class="">Liên Hệ</p>
@@ -51,5 +60,7 @@
                 <p>© 2025 Nguyen Nhat Huy – Đồng tác giả/đồng sở hữu</p>
             </footer>
         </div>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script src="./js/login.js"></script>
     </body>
 </html>
