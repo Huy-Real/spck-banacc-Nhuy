@@ -3,15 +3,19 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Shop acc VALORANT MOBLIE + PC Uy tín - Giá rẻ - Bảo hành</title>
-        <link rel="shortcut icon" href="/uploads/settings/1febc18a-34db-4354-9296-c5afd979370d.png" type="image/x-icon" />
+        <title>Đăng acc bán kiếm tiền</title>
+        <link rel="stylesheet" href="./font-awesome-6.5.1-pro-full/css/all.css" />
+        <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
         <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-        <link rel="stylesheet" href="./font-awesome-6.5.1-pro-full/css/all.css" />
-        <link rel="stylesheet" href="style.css" />
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-        <link rel="stylesheet" href="./font-awesome-6.5.1-pro-full/css/all.css" />
+
+        <!-- link swiper -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+
+        <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     </head>
+
     <body class="bg-gradient-to-b from-black to-indigo-950">
+        <!-- Header -->
         <div class="pt-3 py-2 space-y-3 bg-gradient-to-b from-black to-indigo-950 text-white px-10">
             <div class="text-2xl font-medium text-center py-2">
                 Chào mừng bạn đến với
@@ -23,32 +27,62 @@
                     <li><a href="index.html">TRANG CHỦ</a></li>
                     <li><a href="chushop.html">THÔNG TIN CHỦ SHOP</a></li>
                     <li><a href="Dangban.html">ĐĂNG BÁN TÀI KHOẢN</a></li>
-                    <li><a href="#">CÂU HỎI THƯỜNG GẶP</a></li>
+                    <li><a href="manage-acc.html">QUẢN LÍ TÀI KHOẢN</a></li>
                     <li><a href="#">HỢP TÁC VỚI SHOP</a></li>
                 </ul>
             </div>
         </div>
-        <div class="py-20 max-w-7xl mx-auto min-h-screen space-y-5 text-white">
+        <!-- Main -->
+        <div class="py-20 max-w-7xl mx-auto min-h-screen space-y-5">
             <div class="flex gap-5">
-                <div class="flex-1 space-y-5">
+                <div class="flex-1 space-y-2 border bordewr-gray-700 shadow-md">
                     <div class="">
-                        <label for="" class="label block">Nhập tên tài khoản</label>
-                        <input type="text" class="input" id="acc-id" placeholder="Nhập tên tài khoản" />
+                        <label for="" class="label block text-white">Nhập tên/id của tài khoản</label>
+                        <input type="text" class="input" id="account-name" placeholder="Nhập tên/id tài khoản" />
                     </div>
                     <div class="">
-                        <label for="" class="label block">Nhập mô tả tài khoản</label>
-                        <input type="text" class="input" id="acc-description" placeholder="Nhập mô tả tài khoản" />
+                        <label for="" class="label block text-white">Nhập rank của tài khoản</label>
+                        <input type="text" class="input" id="account-rank" placeholder="Nhập rank tài khoản" />
+                    </div>
+
+                    <div class="">
+                        <label for="" class="label block text-white">Nhập Số súng(skin) mà tài khoản có</label>
+                        <input type="text" class="input" id="account-gun" placeholder="Nhập dữ liệu" />
                     </div>
                     <div class="">
-                        <label for="" class="label block">Nhập link hình ảnh tài khoản</label>
-                        <input type="text" class="input" id="acc-image" placeholder="Nhập link hình ảnh tài khoản" />
+                        <label for="" class="label block text-white">Nhập Số skin BP(Battle Pass) mà tài khoản đã có</label>
+                        <input type="text" class="input" id="account-bp" placeholder="Nhập dữ liệu" />
+                    </div>
+                    <div class="">
+                        <label for="" class="label block text-white">Nhập số Mele(skin) mà tài khoản có</label>
+                        <input type="text" class="input" id="account-mele" placeholder="Nhập dữ liệu" />
+                    </div>
+                    <div class="">
+                        <label for="" class="label block text-white">Nhập giá mà bạn muốn bán tài khoản</label>
+                        <input type="number" class="input" id="account-sell" placeholder="Nhập giá bạn muốn bán (nghìn đồng)" />
+                    </div>
+                    <div class="">
+                        <label for="" class="label block text-white">Nhập link hình ảnh về tài khoản</label>
+                        <input type="url" class="input" id="account-image" placeholder="Nhập link hình ảnh tài khoản " />
                     </div>
                 </div>
                 <div class="flex-1">
                     <img src="" alt="" id="image-preview" class="w-full h-80 object-cover" />
                 </div>
             </div>
-            <button class="btn btn-primary" id="btn-send-account">Đăng acc</button>
+
+            <button class="btn btn-primary" id="btn-upload-account">Đăng tài khoản</button>
+        </div>
+        <!-- Footer -->
+        <div class="bg-black flex flex-col items-center text-white text-center py-3 space-y-2">
+            <p class="">Liên Hệ</p>
+            <div class="">Email: huyn****@gmail.com</div>
+            <div class="">SĐT:+84 036******56</div>
+            <footer>
+                <p>© 2025 Shop Acc Trung Nguyễn – Chủ sở hữu nội dung</p>
+                <p>© 2024 NAMTRUONG.COM × KUNYIDESIGN.VN – Thiết kế & phát triển</p>
+                <p>© 2025 Nguyen Nhat Huy – Đồng tác giả/đồng sở hữu</p>
+            </footer>
         </div>
         <div class="bg-black flex flex-col items-center text-white text-center py-3 space-y-2">
             <p class="">Liên Hệ</p>
@@ -61,6 +95,6 @@
             </footer>
         </div>
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-        <script src="./js/login.js"></script>
+        <script src="./js/dangacc.js"></script>
     </body>
 </html>

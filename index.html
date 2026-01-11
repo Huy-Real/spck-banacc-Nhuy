@@ -23,7 +23,7 @@
                     <li><a href="index.html">TRANG CHỦ</a></li>
                     <li><a href="chushop.html">THÔNG TIN CHỦ SHOP</a></li>
                     <li><a href="Dangban.html">ĐĂNG BÁN TÀI KHOẢN</a></li>
-                    <li><a href="#">CÂU HỎI THƯỜNG GẶP</a></li>
+                    <li><a href="manage-acc.html">QUẢN LÍ TÀI KHOẢN</a></li>
                     <li><a href="#">HỢP TÁC VỚI SHOP</a></li>
                 </ul>
             </div>
@@ -162,74 +162,7 @@
                 <a href="" class="bg-indigo-950 block rounded-xl border border-indigo-600 overflow-hidden font-bold text-center">Xem chi tiết</a>
             </div>
         </div> -->
-        <div class="my-10 grid grid-cols-3 gap-5 px-20 items-center">
-            <div class="w-full border border-indigo-600 bg-black rounded-xl overflow-hidden text-white">
-                <div class="overflow-hidden px-3 py-3">
-                    <div>
-                        <img src="./images/3284anh.png" />
-                        <p class="pt-3 pb-2 font-bold">3284</p>
-                        <p class="">Rank: Vàng</p>
-                        <div class="space-y-1 py-2 text-gray-400">
-                            <p>16 Gun</p>
-                            <p>1 Battle Pass</p>
-                            <p>2 Mele</p>
-                            <p>2 Limit</p>
-                        </div>
-                        <div class="flex justify-between items-center">
-                            <div class="text-xl">
-                                <div class="">3.100.000</div>
-                                <div class="line-through text-indigo-900">6.100.00</div>
-                            </div>
-                            <a href="acc3284.html" class="bg-indigo-950 block px-4 py-2 rounded-xl border border-indigo-600 overflow-hidden font-bold text-center">MUA NGAY</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="w-full border border-indigo-600 bg-black rounded-xl overflow-hidden text-white">
-                <div class="overflow-hidden px-3 py-3">
-                    <div>
-                        <img src="./images/3282anh.png" />
-                        <p class="pt-3 pb-2 font-bold">3282</p>
-                        <p class="">Rank: Bạch Kim</p>
-                        <div class="space-y-1 py-2 text-gray-400">
-                            <p>12 Gun</p>
-                            <p>3 Battle Pass</p>
-                            <p>2 Mele</p>
-                            <p>0 Limit</p>
-                        </div>
-                        <div class="flex justify-between items-center">
-                            <div class="text-xl">
-                                <div class="">2.200.000</div>
-                                <div class="line-through text-indigo-900">4.100.00</div>
-                            </div>
-                            <a href="acc3282.html" class="bg-indigo-950 block px-4 py-2 rounded-xl border border-indigo-600 overflow-hidden font-bold text-center">MUA NGAY</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="w-full border border-indigo-600 bg-black rounded-xl overflow-hidden text-white">
-                <div class="overflow-hidden px-3 py-3">
-                    <div>
-                        <img src="./images/3283anh.png" />
-                        <p class="pt-3 pb-2 font-bold">3283</p>
-                        <p class="">Rank: Vàng</p>
-                        <div class="space-y-1 py-2 text-gray-400">
-                            <p>6 Gun</p>
-                            <p>1 Battle Pass</p>
-                            <p>0 Mele</p>
-                            <p>0 Limit</p>
-                        </div>
-                        <div class="flex justify-between items-center">
-                            <div class="text-xl">
-                                <div class="">1.100.000</div>
-                                <div class="line-through text-indigo-900">1.500.00</div>
-                            </div>
-                            <a href="acc3283.html" class="bg-indigo-950 rounded-xl border border-indigo-600 overflow-hidden font-bold text-center px-4 py-2">MUA NGAY</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <div class="my-10 grid grid-cols-3 gap-5 px-20 items-center" id="account-container"></div>
 
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
         <script type="module">
@@ -254,5 +187,6 @@
                 <p>© 2025 Nguyen Nhat Huy – Đồng tác giả/đồng sở hữu</p>
             </footer>
         </div>
+        <script src="./js/render.js"></script>
     </body>
 </html>
