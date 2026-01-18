@@ -19,7 +19,7 @@ foods.forEach((acc) => {
                     </div>
                     <div class="flex justify-between items-center">
                         <div class="text-xl">
-                            <div class="line-through text-indigo-900">${acc.sell}.000đ</div>
+                            <div class=" text-indigo-900">${acc.sell}K</div>
                         </div>
                         <div href="" class="bg-indigo-950 block px-4 py-2 rounded-xl border border-indigo-600 overflow-hidden font-bold text-center">MUA NGAY</div>
                     </div>

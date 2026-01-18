@@ -4,8 +4,6 @@ const rank = document.getElementById("account-rank");
 const gun = document.getElementById("account-gun");
 const bp = document.getElementById("account-bp");
 const mele = document.getElementById("account-mele");
-const limit = document.getElementById("account-limit");
-const bought = document.getElementById("account-bought");
 const sell = document.getElementById("account-sell");
 const image = document.getElementById("account-image");
 
@@ -55,8 +53,6 @@ btnCreateAccount.addEventListener("click", () => {
         gun: gun.value,
         bp: bp.value,
         mele: mele.value,
-        limit: limit.value,
-        bought: bought.value,
         sell: sell.value,
         image: image.value,
     };
