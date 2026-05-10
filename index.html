@@ -28,10 +28,10 @@
                 </ul>
             </div>
         </div>
-        <div class="flex gap-2 py-3 bg-indigo-950">
+        <div class="flex gap-2 py-3 bg-transparent">
             <div class="w-[350px] border border-indigo-600 rounded-xl overflow-hidden text-white">
-                <div class="bg-indigo-800 py-1 text-center font-bold">TIN TỨC SHOP</div>
-                <div class="overflow-y-scroll scrollbar-hide max-h-[19.5rem] bg-indigo-950 space-y-3">
+                <div class="bg-transparent py-1 text-center font-bold">TIN TỨC SHOP</div>
+                <div class="overflow-y-scroll scrollbar-hide h-[400px] bg-indigo-950 space-y-3">
                     <div class="flex gap-3 p-3 bg-indigo-950 rounded-lg border border-indigo-600">
                         <img src="../images/tintuc1.png" alt="" height="30" width="170" class="rounded-lg border border-indigo-600" />
                         <div>
@@ -68,7 +68,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="bg-indigo-950 py-1 text-center font-bold">Xem thêm</div>
+                <div class="bg-transparent py-1 text-center font-bold">Xem thêm</div>
             </div>
             <div class="flex-1 w-full h-full border border-indigo-600 rounded-xl overflow-hidden">
                 <div class="swiper w-full h-full">
@@ -106,23 +106,23 @@
                             </button>
                         </div>
                     </a>
-                    <div class="bg-indigo-950 rounded-xl border border-indigo-600 overflow-hidden font-bold text-center py-4 text-xl">
+                    <div class="bg-transparent rounded-xl border border-indigo-600 overflow-hidden font-bold text-center py-4 text-xl">
                         <i class="fa-solid fa-wallet mr-2" style="color: #ffffff"></i>$ 0 đ
                     </div>
-                    <div class="bg-indigo-950 rounded-xl border border-indigo-600 overflow-hidden font-bold text-center py-4 text-xl"><i class="fa-solid fa-pallet-box mr-2"></i>NẠP TIỀN</div>
+                    <div class="bg-transparent rounded-xl border border-indigo-600 overflow-hidden font-bold text-center py-4 text-xl"><i class="fa-solid fa-pallet-box mr-2"></i>NẠP TIỀN</div>
                 </div>
                 <div class="grid border items-center border-indigo-600 rounded-2xl py-2 px-4">
                     <div class="items-center border-indigo-600 rounded-2xl">
-                        <a href="#"><img src="https://shopvalorant.vn/assets/Cb05JHz9.gif" alt="" class="" /></a>
-                        <a href="#"><img src="https://shopvalorant.vn/assets/BR-ujPhg.gif" alt="" class="" /></a>
-                        <a href="#"><img src="https://shopvalorant.vn/assets/DNbFO8HA.gif" alt="" class="" /></a>
+                        <a href="#"><img src="./images/5.gif" alt="" class="" /></a>
+                        <a href="#"><img src="./images/6.gif" alt="" class="" /></a>
+                        <a href="#"><img src="./images/7.gif" alt="" class="" /></a>
                     </div>
                 </div>
             </div>
         </div>
         <div class="space-y-3"></div>
-        <h1 class="mt-10 font-medium text-xl">Danh sách các tài khoản hiện được bán</h1>
-        <div class="bg-gray-100 shadow mt-5 grid grid-cols-4 gap-5" id="accounts-container"></div>
+        <h1 class="mt-10 font-medium text-white text-xl">Danh sách các tài khoản hiện được bán</h1>
+        <div class="bg-transparent t shadow mt-5 grid grid-cols-4 gap-5" id="accounts-container"></div>
 
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
         <script type="module">
@@ -137,7 +137,7 @@
                 },
             });
         </script>
-        <div class="bg-black flex flex-col items-center text-white text-center py-5 space-y-3">
+        <div class="bg-transparent flex flex-col items-center text-white text-center py-5 space-y-3">
             <p class="">Liên Hệ</p>
             <div class="">Email: huyn****@gmail.com</div>
             <div class="">SĐT:+84 036******56</div>
@@ -152,11 +152,11 @@
         <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
         <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
         <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
-        <script defer src="../js/firebase.config.js"></script>
-        <script defer src="main.js"></script>
+        <script defer src="./js/firebase.config.js"></script>
+        <script defer src="./js/main.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-        <script defer src="../js/render.js"></script>
+        <script defer src="./js/render.js"></script>
         <!-- kiem tra user dang nhap hay chx -->
-        <script defer src="../js/check-login.js"></script>
+        <script defer src="./js/check-login.js"></script>
     </body>
 </html>

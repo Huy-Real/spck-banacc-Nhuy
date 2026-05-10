@@ -16,7 +16,7 @@
 
     <body class="bg-gradient-to-b from-black to-indigo-950">
         <!-- Header -->
-        <div class="pt-3 py-2 space-y-3 bg-gradient-to-b from-black to-indigo-950 text-white px-10">
+        <div class="pt-3 py-2 space-y-3 bg-transparent text-white px-10">
             <div class="text-2xl font-medium text-center py-2">
                 Chào mừng bạn đến với
                 <span class="text-red-400 uppercase"> Shop bán acc VALORANT MOBILE + PC Uy tín - Giá rẻ - Bảo hành </span>
@@ -34,27 +34,48 @@
         </div>
         <!-- Main -->
 
-        <div class="p-5 text-gray-700">
-            <div class="bg-gray-100 shadow mt-5 p-5">
+        <div class="p-5 text-gray-100">
+            <div class="bg-transparent shadow mt-5 p-5">
                 <h1 class="">thêm tài khoản mới</h1>
                 <form id="product-form">
                     <div class="mb-4">
                         <label for="name" class="block">Tên tài khoản</label>
-                        <input type="text" placeholder="Nhập tên tài khoản ..." id="account-name" class="w-full border rounded px-3 py-2" />
+                        <input type="text" name="name" placeholder="Nhập tên tài khoản ..." id="account-name" class="w-full border rounded px-3 py-2" />
+                    </div>
+                    <div class="mb-4">
+                        <label for="rank" class="block">Hạng của tài khoản</label>
+                        <input type="text" name="rank" placeholder="Nhập Hạng của tài khoản ..." id="account-rank" class="w-full border rounded px-3 py-2" />
+                    </div>
+                    <div class="mb-4">
+                        <label for="gun" class="block">Số súng mà tài khoản có</label>
+                        <input type="text" name="gun" placeholder="Nhập số súng ..." id="account-gun" class="w-full border rounded px-3 py-2" />
+                    </div>
+                    <div class="mb-4">
+                        <label for="bp" class="block">Số Battle pass mà tài khoản có</label>
+                        <input type="text" name="bp" placeholder="Nhập Số Battle pass mà tài khoản đang có ..." id="account-bp" class="w-full border rounded px-3 py-2" />
+                    </div>
+                    <div class="mb-4">
+                        <label for="mele" class="block">Số Mele mà tài khoản có</label>
+                        <input type="text" name="mele" placeholder="Nhập Số Mele mà tài khoản đang có ..." id="account-mele" class="w-full border rounded px-3 py-2" />
                     </div>
                     <div class="mb-4">
                         <label for="price" class="block">Giá tài khoản</label>
-                        <input type="text" placeholder="Nhập Giá tài khoản ..." id="account-price" class="w-full border rounded px-3 py-2" />
+                        <input type="text" name="sell" placeholder="Nhập Giá tài khoản ..." id="account-sell" class="w-full border rounded px-3 py-2" />
                     </div>
                     <div class="mb-4">
                         <label for="image" class="block">Link ảnh tài khoản (URL)</label>
-                        <input type="text" placeholder="Nhập Link ảnh tài khoản ..." id="account-image" class="w-full border rounded px-3 py-2" />
+                        <input type="text" name="image" placeholder="Nhập Link ảnh tài khoản ..." id="account-image" class="w-full border rounded px-3 py-2" />
                     </div>
-                    <button type="submit" class="btn btn-primary">thêm tài khoản</button>
+                    <div class="mb-4">
+                        <label class="block">Xem trước ảnh</label>
+                        <img id="image-preview" src="" alt="Xem trước ảnh" class="w-full border rounded h-48 object-cover" />
+                    </div>
+
+                    <button type="submit" id="btn-upload-account" class="btn btn-primary">thêm tài khoản</button>
                 </form>
             </div>
         </div>
-        <div class="bg-black flex flex-col items-center text-white text-center py-3 space-y-2">
+        <div class="bg-transparent flex flex-col items-center text-white text-center py-3 space-y-2">
             <p class="">Liên Hệ</p>
             <div class="">Email: huyn****@gmail.com</div>
             <div class="">SĐT:+84 036******56</div>
@@ -69,7 +90,9 @@
         <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
         <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
         <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+        <script defer src="../js/firebase.config.js"></script>
+
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-        <script defer src="../js/Create-account.js"></script>
+        <script defer src="../js/dangacc.js"></script>
     </body>
 </html>

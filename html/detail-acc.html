@@ -11,9 +11,9 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
         <link rel="stylesheet" href="./font-awesome-6.5.1-pro-full/css/all.css" />
     </head>
-    <body class="bg-gradient-to-b from-black to-indigo-950 text-white px-10">
+    <body class="bg-gradient-to-b from-black to-indigo-950">
         <!-- Header -->
-        <div class="pt-3 py-2 space-y-3 bg-gradient-to-b from-black to-indigo-950 text-white px-10">
+        <div class="pt-3 py-2 space-y-3 bg-transparent text-white px-10">
             <div class="text-2xl font-medium text-center py-2">
                 Chào mừng bạn đến với
                 <span class="text-red-400 uppercase"> Shop bán acc VALORANT MOBILE + PC Uy tín - Giá rẻ - Bảo hành </span>
@@ -30,28 +30,10 @@
             </div>
         </div>
         <!-- Main -->
-        <div class="py-20 max-w-7xl mx-auto min-h-screen">
-            <h1 class="text-2xl font-medium mb-5">Quản lí Tài khoản</h1>
-            <table id="manage-account">
-                <tr>
-                    <th class="border px-4 py-2">Id/Tên tài khoản</th>
-                    <th class="border px-4 py-2">Mô tả</th>
-                    <th class="border px-4 py-2">Hình ảnh</th>
-                    <th class="border px-4 py-2">Hành động</th>
-                </tr>
-            </table>
-        </div>
-        <dialog id="my_modal_2" class="modal">
-            <div class="modal-box">
-                <h3 class="text-lg font-bold">Hello!</h3>
-                <p class="py-4">Press ESC key or click outside to close</p>
-            </div>
-            <form method="dialog" class="modal-backdrop">
-                <button>close</button>
-            </form>
-        </dialog>
-        <!-- Footer -->
-        <div class="bg-black flex flex-col items-center text-white text-center py-3 space-y-2">
+
+        <div class=""></div>
+
+        <div class="bg-transparent flex flex-col items-center text-white text-center py-5 space-y-3">
             <p class="">Liên Hệ</p>
             <div class="">Email: huyn****@gmail.com</div>
             <div class="">SĐT:+84 036******56</div>
@@ -61,14 +43,11 @@
                 <p>© 2025 Nguyen Nhat Huy – Đồng tác giả/đồng sở hữu</p>
             </footer>
         </div>
-        <!-- Link CDN của firebase -->
-        <!-- chữ defer cps nghĩa là -->
         <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
         <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
         <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
-        <script defer src="../js/firebase.config.js"></script>
-
+        <script defer src="./js/firebase.config.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-        <script defer src="../js/manage-acc.js"></script>
+        <script defer src="../js/detail-acc.js"></script>
     </body>
 </html>
