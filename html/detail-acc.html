@@ -7,6 +7,8 @@
         <link rel="shortcut icon" href="/uploads/settings/1febc18a-34db-4354-9296-c5afd979370d.png" type="image/x-icon" />
         <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
         <link rel="stylesheet" href="./font-awesome-6.5.1-pro-full/css/all.css" />
+        <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+
         <link rel="stylesheet" href="style.css" />
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
         <link rel="stylesheet" href="./font-awesome-6.5.1-pro-full/css/all.css" />
@@ -31,7 +33,31 @@
         </div>
         <!-- Main -->
 
-        <div class=""></div>
+        <div class="max-w-6xl mx-auto mt-6 p-6 bg-transparent rounded-lg text-white">
+            <div class="bg-transparent shadow-md rounded-lg p-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
+                    <!-- Left: product info -->
+                    <div class="space-y-4">
+                        <h1 id="name" class="text-3xl md:text-4xl font-bold">Tên tài khoản</h1>
+                        <div id="price" class="text-2xl text-red-400 font-semibold">0đ</div>
+
+                        <div class="grid grid-cols-2 gap-3 text-sm md:text-base">
+                            <div><span class="font-semibold">Hạng:</span> <span id="rank"></span></div>
+                            <div><span class="font-semibold">Số súng:</span> <span id="gun"></span></div>
+                            <div><span class="font-semibold">Battle Pass:</span> <span id="bp"></span></div>
+                            <div><span class="font-semibold">Melee:</span> <span id="mele"></span></div>
+                        </div>
+
+                        <!-- Buyer view: no edit/delete actions -->
+                    </div>
+
+                    <!-- Right: image -->
+                    <div class="flex justify-center items-center">
+                        <img id="image" src="../images/KoBT.png" alt="Ảnh tài khoản" class="w-full max-w-md rounded-lg shadow-lg object-cover" />
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <div class="bg-transparent flex flex-col items-center text-white text-center py-5 space-y-3">
             <p class="">Liên Hệ</p>
@@ -46,7 +72,7 @@
         <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
         <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
         <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
-        <script defer src="./js/firebase.config.js"></script>
+        <script defer src="../js/firebase.config.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <script defer src="../js/detail-acc.js"></script>
     </body>

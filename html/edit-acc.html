@@ -7,18 +7,20 @@
         <link rel="shortcut icon" href="/uploads/settings/1febc18a-34db-4354-9296-c5afd979370d.png" type="image/x-icon" />
         <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
         <link rel="stylesheet" href="./font-awesome-6.5.1-pro-full/css/all.css" />
+        <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+
         <link rel="stylesheet" href="style.css" />
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
         <link rel="stylesheet" href="./font-awesome-6.5.1-pro-full/css/all.css" />
     </head>
     <body class="bg-gradient-to-b from-black to-indigo-950">
         <!-- Header -->
-        <div class="pt-3 py-2 space-y-3 bg-gradient-to-b from-black to-indigo-950 text-white px-10">
+        <div class="pt-3 py-2 space-y-3 bg-gradient-to-b from-black to-indigo-950 px-10">
             <div class="text-2xl font-medium text-center py-2">
                 Chào mừng bạn đến với
                 <span class="text-red-400 uppercase"> Shop bán acc VALORANT MOBILE + PC Uy tín - Giá rẻ - Bảo hành </span>
             </div>
-            <div class="flex items-center border p-3 border-indigo-600 rounded-xl gap-5">
+            <div class="flex items-center border p-3 border-indigo-600 rounded-xl text-white gap-5">
                 <img src="../images/KoBT.png" alt="" width="168" height="32" />
                 <ul class="flex justify-between w-full font-semibold text text-xl">
                     <li><a href="../index.html">TRANG CHỦ</a></li>
@@ -33,37 +35,37 @@
         <div class="py-20 max-w-7xl mx-auto min-h-screen space-y-5">
             <div class="flex gap-5">
                 <div class="flex-1 space-y-5">
-                    <div class="text-white font-bold border border-gray-700 shadow-md p-4 rounded-lg">
+                    <div class="font-bold border border-indigo-700 bg-gray-600 shadow-md p-4 rounded-lg">
                         <label for="" class="label block">Nhập tên Tài khoản</label>
                         <input type="text" class="input" id="account-name" placeholder="Nhập tên Tài khoản" />
                     </div>
 
-                    <div class="text-white font-bold border border-gray-700 shadow-md p-4 rounded-lg">
+                    <div class="font-bold border border-indigo-700 bg-gray-600 shadow-md p-4 rounded-lg">
                         <label for="" class="label block">Nhập rank của Tài khoản</label>
                         <input type="text" class="input" id="account-rank" placeholder="Nhập mô tả Tài khoản" />
                     </div>
 
-                    <div class="text-white font-bold border border-gray-700 shadow-md p-4 rounded-lg">
+                    <div class="font-bold border border-indigo-700 bg-gray-600 shadow-md p-4 rounded-lg">
                         <label for="" class="label block">Nhập số súng của Tài khoản</label>
                         <input type="text" class="input" id="account-gun" placeholder="Nhập mô tả Tài khoản" />
                     </div>
 
-                    <div class="text-white font-bold border border-gray-700 shadow-md p-4 rounded-lg">
+                    <div class="font-bold border border-indigo-700 bg-gray-600 shadow-md p-4 rounded-lg">
                         <label for="" class="label block">Nhập số bp của Tài khoản</label>
                         <input type="text" class="input" id="account-bp" placeholder="Nhập mô tả Tài khoản" />
                     </div>
 
-                    <div class="text-white font-bold border border-gray-700 shadow-md p-4 rounded-lg">
+                    <div class="font-bold border border-indigo-700 bg-gray-600 shadow-md p-4 rounded-lg">
                         <label for="" class="label block">Nhập số mele của Tài khoản</label>
                         <input type="text" class="input" id="account-mele" placeholder="Nhập mô tả Tài khoản" />
                     </div>
 
-                    <div class="text-white font-bold border border-gray-700 shadow-md p-4 rounded-lg">
+                    <div class="font-bold border border-indigo-700 bg-gray-600 shadow-md p-4 rounded-lg">
                         <label for="" class="label block">Nhập số tiền bạn muốn bán </label>
                         <input type="text" class="input" id="account-sell" placeholder="Nhập mô tả Tài khoản" />
                     </div>
 
-                    <div class="text-white font-bold border border-gray-700 shadow-md p-4 rounded-lg">
+                    <div class="font-bold border border-indigo-700 bg-gray-600 shadow-md p-4 rounded-lg">
                         <label for="" class="label block">Nhập link hình ảnh Tài khoản</label>
                         <input type="text" class="input" id="account-image" placeholder="Nhập link hình ảnh Tài khoản" />
                     </div>
@@ -73,10 +75,10 @@
                 </div>
             </div>
 
-            <button class="btn btn-primary" id="btn-create-account">Cập nhật Tài khoản</button>
+            <button class="btn btn-primary" id="btn-Create-account">Cập nhật Tài khoản</button>
         </div>
         <!-- Footer -->
-        <div class="bg-black flex flex-col items-center text-white text-center py-3 space-y-2">
+        <div class="bg-black flex flex-col items-center text-center py-3 space-y-2">
             <p class="">Liên Hệ</p>
             <div class="">Email: huyn****@gmail.com</div>
             <div class="">SĐT:+84 036******56</div>
@@ -86,7 +88,11 @@
                 <p>© 2025 Nguyen Nhat Huy – Đồng tác giả/đồng sở hữu</p>
             </footer>
         </div>
+        <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+        <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+        <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+        <script defer src="../js/firebase.config.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-        <script src="./js/edit-acc.js"></script>
+        <script defer src="../js/edit-acc.js"></script>
     </body>
 </html>

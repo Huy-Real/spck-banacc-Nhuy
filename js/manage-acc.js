@@ -36,12 +36,12 @@ db.collection("products")
         <td class="border px-4 py-2  "><p>${product.gun} Gun</p>
                         <p>${product.bp} Battle Pass</p>
                         <p>${product.mele} Mele</p>
-                        <p">${product.sell}.000đ</p></td>
+                        <p">${product.sell} VNĐ</p></td>
         <td class="border p-3  w-64">
             <img src="${product.image}" alt="${product.name}" class="h-full w-full object-cover"/>
         </td>
         <td class="border px-4 py-2 w-64">
-        <a href="./edit-acc.html?${product.id}" class="btn btn-warning mr-2">Sửa</a>
+        <a href="./edit-acc.html?${doc.id}" class="btn btn-warning mr-2">Sửa</a>
         <button class="btn btn-error bg-red-500" onclick="handleDeleteAcc('${doc.id}');">Xóa</button>
         </td>
 

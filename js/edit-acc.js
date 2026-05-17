@@ -1,44 +1,46 @@
-const btnCreateaccount = document.getElementById("btn-create-account");
-const name = document.getElementById("acc-name");
+const btnCreateaccount = document.getElementById("btn-Create-account");
+const name = document.getElementById("account-name");
 const rank = document.getElementById("account-rank");
 const gun = document.getElementById("account-gun");
 const bp = document.getElementById("account-bp");
 const mele = document.getElementById("account-mele");
 const sell = document.getElementById("account-sell");
-const image = document.getElementById("acc-image");
+const image = document.getElementById("account-image");
 let imagePreview = document.getElementById("image-preview");
 
-const queryString = window.location.search;
-// lấy ra danh sách món ăn từ localStorage
-const accs = JSON.parse(localStorage.getItem("accs")) || [];
+const id = window.location.search.slice(1);
 
-// lấy id từ URL
-const accId = Number(queryString.split("?")[1]);
+const db = firebase.firestore();
+db.collection("products")
+    .doc(id)
+    .get()
+    .then((doc) => {
+        const product = doc.data();
+        console.log(product);
+        bp.value = product.bp;
+        gun.value = product.gun;
+        image.value = product.image;
+        mele.value = product.mele;
+        name.value = product.name;
+        rank.value = product.rank;
+        sell.value = product.sell;
+        imagePreview.src = product.image;
+    })
+    .catch((error) => {
+        console.log("Error getting document:", error);
+        Swal.fire({
+            icon: "error",
+            title: "Error getting product detail",
+        });
+    });
 
-// tìm món ăn có id tương ứng
-const acc = accs.find((f) => f.id === accId);
-// hiển thị thông tin món ăn lên các input để chỉnh sửa
-if (acc) {
-    name.value = acc.name;
-    rank.value = acc.rank;
-    gun.value = acc.gun;
-    bp.value = acc.bp;
-    mele.value = acc.mele;
-    sell.value = acc.sell;
-    image.value = acc.image;
-    imagePreview.src = acc.image;
-}
-
-btnCreateacc.addEventListener("click", () => {
+btnCreateaccount.addEventListener("click", () => {
     // kiểm tra dữ liệu hợp lệ
     if (!name.value) {
         alert("Vui lòng nhập tên tài khoản");
         return;
     }
-    if (!description.value) {
-        alert("Vui lòng nhập mô tả tài khoản");
-        return;
-    }
+
     if (!rank.value) {
         alert("Vui lòng nhập Rank tài khoản");
         return;
@@ -64,26 +66,41 @@ btnCreateacc.addEventListener("click", () => {
         return;
     }
 
-    // tìm index của tài khoản cần cập nhật
-    const accIndex = accs.findIndex((f) => f.id === accId);
-
-    // cập nhật thông tin tài khoản
-    if (accIndex !== -1) {
-        accs[accIndex] = {
-            id: accId, // giữ nguyên id
-            name: name.value,
-            rank: rank.value,
-            gun: gun.value,
-            bp: bp.value,
-            mele: mele.value,
-            sell: sell.value,
-            image: image.value,
-        };
-
-        // lưu danh sách tài khoản vào localStorage
-        localStorage.setItem("accs", JSON.stringify(accs));
-
-        // chuyển về trang danh sách tài khoản
-        window.location.href = "../index.html";
-    }
+    const newProduct = {
+        name: name.value,
+        rank: rank.value,
+        gun: gun.value,
+        bp: bp.value,
+        mele: mele.value,
+        sell: sell.value,
+        image: image.value,
+    };
+    console.log(newProduct);
+    Swal.fire({
+        icon: "loading",
+        title: "Loading...",
+        showConfirmButton: false,
+    });
+    const db = firebase.firestore();
+    db.collection("products")
+        .doc(id)
+        .update(newProduct)
+        .then(() => {
+            console.log("Document updated successfully");
+            Swal.fire({
+                icon: "success",
+                title: "Update product successfully",
+                willClose: () => {
+                    window.location.href = "../index.html";
+                },
+            });
+        })
+        .catch((error) => {
+            console.error("Error updating document: ", error);
+            Swal.fire({
+                icon: "error",
+                title: "Update product failed",
+                text: error.message,
+            });
+        });
 });
